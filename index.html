@@ -3,14 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cafe Name | Coffee & Bites</title>
+    <title>The Daily Grind | Artisan Cafe</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
     <header>
+        <div class="logo">Daily Grind</div>
         <nav>
-            <h1>Cafe Name</h1>
             <ul>
                 <li><a href="#menu">Menu</a></li>
                 <li><a href="#contact">Contact</a></li>
@@ -19,21 +19,25 @@
     </header>
 
     <section class="hero">
-        <h2>Your Daily Dose of Happiness</h2>
-        <p>Fresh coffee, artisanal pastries, and cozy vibes.</p>
+        <div class="hero-content">
+            <h1>Fresh Coffee. Better Days.</h1>
+            <p>Experience the finest beans, roasted to perfection.</p>
+            <a href="#menu" class="cta-button">View Menu</a>
+        </div>
     </section>
 
     <section id="menu">
         <h2>Our Menu</h2>
-        <div class="menu-items">
-            <div class="item">Espresso - $3.00</div>
-            <div class="item">Latte - $4.50</div>
-            <div class="item">Croissant - $3.50</div>
+        <div class="menu-grid">
+            <div class="menu-card"><h3>Espresso</h3><p>$3.00</p></div>
+            <div class="menu-card"><h3>Latte</h3><p>$4.50</p></div>
+            <div class="menu-card"><h3>Cappuccino</h3><p>$4.50</p></div>
+            <div class="menu-card"><h3>Croissant</h3><p>$3.50</p></div>
         </div>
     </section>
 
     <footer id="contact">
-        <p>Visit us: 123 Coffee St. | Open: 7am - 6pm</p>
+        <p>&copy; 2026 Daily Grind Cafe | 123 Coffee St. | 555-0199</p>
     </footer>
 
     <script src="script.js"></script>
