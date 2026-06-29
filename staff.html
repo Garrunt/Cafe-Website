@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="styles.css">
+    <title>Daily Grind | Staff Portal</title>
+</head>
+<body>
+    <header>
+        <div class="logo">Staff Portal</div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="reservation.html">Reservations</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="staff-container">
+        <h2>Manage Reservations</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Date</th>
+                    <th>Time</th>
+                    <th>Guests</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody id="res-table">
+                </tbody>
+        </table>
+    </main>
+
+    <script>
+        const table = document.getElementById('res-table');
+
+        // Function to render the table rows from localStorage
+        function renderTable() {
+            const res = JSON.parse(localStorage.getItem('cafeReservations') || '[]');
+            table.innerHTML = ''; // Clear existing table rows
+            
+            res.forEach((r, index) => {
+                table.innerHTML += `<tr>
+                    <td>${r.name}</td>
+                    <td>${r.date}</td>
+                    <td>${r.time}</td>
+                    <td>${r.guests}</td>
+                    <td>
+                        <button onclick="deleteRes(${index})" class="cta-button" style="background:red; padding:5px 10px;">
+                            Delete
+                        </button>
+                    </td>
+                </tr>`;
+            });
+        }
+
+        // Function to delete a reservation
+        function deleteRes(index) {
+            if(confirm("Are you sure you want to delete this booking?")) {
+                const res = JSON.parse(localStorage.getItem('cafeReservations') || '[]');
+                res.splice(index, 1); // Remove the item
+                localStorage.setItem('cafeReservations', JSON.stringify(res));
+                renderTable(); // Refresh the table
+            }
+        }
+
+        // Initial render on page load
+        renderTable();
+    </script>
+</body>
+</html>

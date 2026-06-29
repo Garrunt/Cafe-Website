@@ -1,0 +1,46 @@
+:root { --primary: #3e2723; --accent: #d4a373; --light: #fefae0; }
+body { font-family: sans-serif; background: var(--light); margin: 0; }
+header { display: flex; justify-content: space-between; padding: 20px 10%; background: #fff; }
+nav ul { display: flex; list-style: none; gap: 20px; }
+nav a { text-decoration: none; color: var(--primary); font-weight: bold; }
+.form-container, .staff-container { padding: 50px 10%; }
+.reservation-form { display: flex; flex-direction: column; gap: 10px; max-width: 300px; }
+table { width: 100%; border-collapse: collapse; background: white; }
+th, td { padding: 15px; border: 1px solid #ddd; text-align: left; }
+th { background: var(--primary); color: white; }
+.cta-button { padding: 10px; background: var(--accent); color: white; border: none; cursor: pointer; }
+
+/* Hero Styles */
+.hero { 
+    height: 90vh; 
+    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('cafe-background.jpg'); 
+    background-size: cover; 
+    display: flex; 
+    flex-direction: column; 
+    justify-content: center; 
+    align-items: center; 
+    color: white; 
+    text-align: center;
+}
+
+.hero h1 { font-size: 4rem; margin-bottom: 20px; }
+
+/* Menu Section */
+#menu { padding: 80px 10%; background: #fff; }
+.menu-category { margin-bottom: 50px; }
+.menu-category h3 { font-size: 2rem; color: var(--primary); border-bottom: 2px solid var(--accent); display: inline-block; margin-bottom: 20px; }
+
+.menu-grid { 
+    display: grid; 
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); 
+    gap: 30px; 
+}
+
+.menu-card { 
+    padding: 20px; 
+    border: 1px solid #eee; 
+    border-radius: 10px; 
+    transition: transform 0.3s; 
+}
+
+.menu-card:hover { transform: translateY(-10px); box-shadow: 0 10px 20px rgba(0,0,0,0.1); }

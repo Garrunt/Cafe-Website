@@ -7,3 +7,12 @@ document.querySelectorAll('nav a').forEach(anchor => {
         });
     });
 });
+const newRes = {
+    name: document.getElementById('name').value,
+    date: document.getElementById('date').value,
+    time: document.getElementById('time').value, // Add this line
+    guests: document.getElementById('guests').value
+};
+
+if(confirm("Are you sure you want to delete this booking?")) {
+}
