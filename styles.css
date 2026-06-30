@@ -36,11 +36,28 @@ th { background: var(--primary); color: white; }
     gap: 30px; 
 }
 
-.menu-card { 
-    padding: 20px; 
-    border: 1px solid #eee; 
-    border-radius: 10px; 
-    transition: transform 0.3s; 
-}
 
 .menu-card:hover { transform: translateY(-10px); box-shadow: 0 10px 20px rgba(0,0,0,0.1); }
+
+/* Images*/
+.menu-card img {
+    width: 100%;       
+    height: 200px;     
+    object-fit: cover; 
+    border-radius: 8px 8px 0 0; 
+    display: block;
+}
+
+/* Ensure menu cards look good with images */
+.menu-card {
+    background: white;
+    padding: 0;        
+    padding-bottom: 20px;
+    border-radius: 8px;
+    overflow: hidden;  
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.menu-card h4, .menu-card p {
+    padding: 0 20px;   
+}
